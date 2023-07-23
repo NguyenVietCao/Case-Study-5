@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ListService(props) {
+function ServiceList(props) {
     return (
         <div>
            <>
@@ -506,4 +506,4 @@ function ListService(props) {
     );
 }
 
-export default ListService;
+export default ServiceList;
