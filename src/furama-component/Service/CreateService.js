@@ -1,4 +1,5 @@
 import React from 'react';
+import{Link}from 'react-router-dom'
 
 function CreateService(props) {
     return (
@@ -50,13 +51,13 @@ function CreateService(props) {
               >
                 <i className="material-icons"></i> <span>Add New Service</span>
               </a>
-              <a
+              <Link to={'/service'}
                 href="#deleteEmployeeModal"
                 className="btn btn-danger"
                 data-toggle="modal"
               >
                 <i className="material-icons"></i> <span>Back To Menu</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

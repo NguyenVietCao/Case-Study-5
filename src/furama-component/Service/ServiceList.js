@@ -1,4 +1,5 @@
 import React from 'react';
+import{Link}from 'react-router-dom';
 
 function ServiceList(props) {
     return (
@@ -39,18 +40,22 @@ function ServiceList(props) {
           <div className="row">
             <div className="col-sm-6">
               <h2>
-                Service <b>List</b>
+                Service <b>List</b> 
               </h2>
+              
+             
+            
+              
             </div>
             <div className="col-sm-6">
-              <a
+              <Link to={`/service/new`}
                 href="#addEmployeeModal"
                 className="btn btn-success"
                 data-toggle="modal"
               >
                 <i className="material-icons"></i>
                 <span>Add New Service</span>
-              </a>
+              </Link>
               <a
                 href="#deleteEmployeeModal"
                 className="btn btn-danger"

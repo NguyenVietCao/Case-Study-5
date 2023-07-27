@@ -1,10 +1,9 @@
 import React from 'react';
-import{Link}from 'react-router-dom';
 
-function CustomerList(props) {
-    return (
-        <div>
-            <>
+function ContractList(props) {
+  return (
+    <div>
+      <>
   <meta charSet="utf-8" />
   <meta
     name="viewport"
@@ -40,7 +39,7 @@ function CustomerList(props) {
           <div className="row">
             <div className="col-sm-6">
               <h2>
-                Customer <b>List</b><span><Link to={'/customer/new'}>Create Customer</Link></span>
+                Customer <b>List</b>
               </h2>
             </div>
             <div className="col-sm-6">
@@ -70,16 +69,13 @@ function CustomerList(props) {
                   <input type="checkbox" id="selectAll" />
                   <label htmlFor="selectAll" />
                 </span>
-                {/* Họ tên, Ngày sinh, Giới tính, Số CMND, Số Điện Thoại, Email, Loại khách, Địa chỉ  */}
+                {/* Hợp đồng thuê sẽ bao gồm các thông tin: Số hợp đồng, Ngày bắt đầu, Ngày kết thúc, Số tiền cọc trước, Tổng số tiền thanh toán. */}
               </th>
-              <th> Name</th>
-              <th>Birth Day</th>
-              <th>Gender</th>
-              <th>Citizen Id</th>
-              <th>Phone Number</th>
-              <th>Email</th>
-              <th>Customer Type</th>
-              <th>Address</th>
+              <th> Contract Number</th>
+              <th>Start Day</th>
+              <th>End Day</th>
+              <th>Deposit</th>
+              <th>Total Payment</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -100,9 +96,6 @@ function CustomerList(props) {
               <td>thomashardy@mail.com</td>
               <td>89 Chiaroscuro Rd, Portland, USA</td>
               <td>(171) 555-2222</td>
-              <td />
-              <td />
-              <td />
               <td />
               <td>
                 <a
@@ -150,9 +143,6 @@ function CustomerList(props) {
               <td>Obere Str. 57, Berlin, Germany</td>
               <td>(313) 555-5735</td>
               <td />
-              <td />
-              <td />
-              <td />
               <td>
                 <a
                   href="#editEmployeeModal"
@@ -198,9 +188,6 @@ function CustomerList(props) {
               <td>mariaanders@mail.com</td>
               <td>25, rue Lauriston, Paris, France</td>
               <td>(503) 555-9931</td>
-              <td />
-              <td />
-              <td />
               <td />
               <td>
                 <a
@@ -248,9 +235,6 @@ function CustomerList(props) {
               <td>C/ Araquil, 67, Madrid, Spain</td>
               <td>(204) 619-5731</td>
               <td />
-              <td />
-              <td />
-              <td />
               <td>
                 <a
                   href="#editEmployeeModal"
@@ -296,9 +280,6 @@ function CustomerList(props) {
               <td>martinblank@mail.com</td>
               <td>Via Monte Bianco 34, Turin, Italy</td>
               <td>(480) 631-2097</td>
-              <td />
-              <td />
-              <td />
               <td />
               <td>
                 <a
@@ -521,8 +502,8 @@ function CustomerList(props) {
   </div>
 </>
 
-        </div>
-    );
+    </div>
+  );
 }
 
-export default CustomerList;
+export default ContractList;

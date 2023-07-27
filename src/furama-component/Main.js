@@ -11,7 +11,7 @@ function Main(props) {
     <div className="slider-active dot-style">
       <div
         className="single-slider  hero-overly slider-height d-flex align-items-center"
-        data-background="assets/img/hero/h1_hero.jpg"
+        data-background="./img/hero/h1_hero.jpg"
       >
         <div className="container">
           <div className="row justify-content-center text-center">
