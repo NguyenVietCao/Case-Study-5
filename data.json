@@ -1,20 +1,42 @@
 {
   "services": [
     {
-      "id": 1,
-      "ServiceName": "json-server",
-      "UsableArea": "typicode",
-      "RentalFee": "typicode",
-      "Quantity": "12",
-      "RentalType": "3000"
+      "serviceName": "Villa",
+      "usableArea": "120",
+      "rentalFee": "2000",
+      "quantity": "6",
+      "rentalType": "Month",
+      "id": 2
     },
     {
-      "serviceName": "sde",
-      "usableArea": "ds",
-      "rentalFee": "sd",
-      "quantity": "ds",
-      "rentalType": "sds",
+      "id": 5,
+      "serviceName": "House",
+      "usableArea": "120",
+      "rentalFee": "12000",
+      "quantity": "6",
+      "rentalType": "month"
+    },
+    {
+      "serviceName": "House",
+      "usableArea": "200",
+      "rentalFee": "1200",
+      "quantity": "6",
+      "rentalType": "year",
+      "id": 6
+    }
+  ],
+  "serviceName": [
+    {
+      "Name": "Villa",
+      "id": 1
+    },
+    {
+      "Name": "House",
       "id": 2
+    },
+    {
+      "Name": "Room",
+      "id": 3
     }
   ],
   "customers": [

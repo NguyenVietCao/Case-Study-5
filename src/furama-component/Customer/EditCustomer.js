@@ -2,6 +2,7 @@ import React from 'react';
 
 function EditCustomer(props) {
     return (
+    
         <div>
            <>
   <meta charSet="utf-8" />

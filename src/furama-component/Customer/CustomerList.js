@@ -40,24 +40,26 @@ function CustomerList(props) {
           <div className="row">
             <div className="col-sm-6">
               <h2>
-                Customer <b>List</b><span><Link to={'/customer/new'}>Create Customer</Link></span>
+                Customer <b>List</b>
               </h2>
             </div>
             <div className="col-sm-6">
               <a
-                href="#addEmployeeModal"
+           
                 className="btn btn-success"
                 data-toggle="modal"
               >
                 <i className="material-icons"></i>{" "}
-                <span>Add New Customer</span>
+            
+                <span><Link to={'/customer/new'}>Add New Customer</Link></span>
               </a>
               <a
                 href="#deleteEmployeeModal"
                 className="btn btn-danger"
                 data-toggle="modal"
               >
-                <i className="material-icons"></i> <span>Delete</span>
+                <i className="material-icons"></i>
+                 <span>Delete</span>
               </a>
             </div>
           </div>

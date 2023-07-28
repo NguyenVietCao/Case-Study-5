@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getListService, addService } from "../service/ServiceSever";
+import { getListService, addService, deleteService } from "../service/ServiceSever";
 import { Link } from "react-router-dom";
 
 function ServiceList() {
@@ -7,7 +7,9 @@ function ServiceList() {
   // console.log(services);
 
   const [service, setService] = useState([]);
+  
   // const [newService, setNewService] = useState("");
+
 
 
   const getListServices = async () => {
@@ -15,6 +17,10 @@ function ServiceList() {
     console.log(data);
     setService(data);
   };
+  const handleDelete= async(id)=>{
+    await deleteService(id);
+    await getListServices();
+  }
 
   useEffect(() => {
     getListServices();
@@ -125,17 +131,19 @@ function ServiceList() {
                           <label htmlFor="checkbox1" />
                         </span>
                       </td>
-                      <td>{service.ServiceName}</td>
-                      <td>{service.UsableArea}</td>
-                      <td>{service.RentalFee}</td>
-                      <td>{service.Quantity}</td>
-                      <td>{service.RentalType}</td>
+                      <td>{service.serviceName}</td>
+                      <td>{service.usableArea}</td>
+                      <td>{service.rentalFee}</td>
+                      <td>{service.quantity}</td>
+                      <td>{service.rentalType}</td>
                       <td>
+              
                         <a
+                 
                           href="#editEmployeeModal"
                           className="edit"
                           data-toggle="modal"
-                        >
+                        ><Link to={`/service/edit/${service.id}`}> 
                           <i
                             className="material-icons"
                             data-toggle="tooltip"
@@ -143,9 +151,12 @@ function ServiceList() {
                           >
                             
                           </i>
+                          </Link>
                         </a>
+                      
                         <a
                           href="#deleteEmployeeModal"
+                          onClick={()=>{handleDelete(service.id)}}
                           className="delete"
                           data-toggle="modal"
                         >
@@ -157,6 +168,7 @@ function ServiceList() {
                             
                           </i>
                         </a>
+                       
                       </td>
                     </tr>
                   ))}

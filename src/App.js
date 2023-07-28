@@ -8,6 +8,7 @@ import CreateService from "./furama-component/ServiceFurama/CreateService";
 import CustomerList from "./furama-component/Customer/CustomerList";
 import CreateCustomer from "./furama-component/Customer/CreateCustomer";
 import ContractList from "./furama-component/contract/ContractList";
+import EditService from "./furama-component/ServiceFurama/EditService";
 function App() {
   return (
     <div className="App">
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Main />} />
           <Route path="/service" element={<ListService />} />
           <Route path="/service/new" element={<CreateService />} />
+          <Route path="/service/edit/:id" element={<EditService/>}/>
           <Route path="/customer" element={<CustomerList />} />
           <Route path="/customer/new" element={<CreateCustomer />} />
           <Route path="/contract" element={<ContractList />} />

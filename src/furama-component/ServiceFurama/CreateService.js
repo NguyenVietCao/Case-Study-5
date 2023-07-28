@@ -1,13 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
-import { addService } from "../service/ServiceSever";
+import { addService,getListServiceName } from "../service/ServiceSever";
+
 
 function CreateService() {
+  const[serviceNames,setserviceName] = useState([]);
+
   const handleSubmit = async (value) => {
     await addService(value);
+
   };
+
+  const getListServiceNames = async () => {
+    const options = await getListServiceName();
+    setserviceName(options)
+    console.log(options);
+  }
+useEffect(() => {
+  getListServiceNames();
+},[])
 
   return (
     <>
@@ -97,7 +110,22 @@ function CreateService() {
 
                   <table>
                     <tbody>
+                      {/* service name */}
                       <tr>
+          <td> <label htmlFor="serviceName">Service Name</label></td>
+         <td>  <Field as="select" id="serviceName" name="serviceName" >
+            <option value="" disabled>
+              -- Chọn --
+            </option>
+            {serviceNames.map((serviceName) => (
+              <option key={serviceName.id} value={serviceName.Name}>
+                {serviceName.Name}
+              </option>
+            ))}
+          </Field></td>
+      <ErrorMessage name="serviceName" component= 'div'/>
+        </tr>
+                      {/* <tr>
                         <td>
                           <label htmlFor="serviceName">Service Name</label>
                         </td>
@@ -105,7 +133,7 @@ function CreateService() {
                           <Field id="serviceName" name="serviceName" />
                         </td>
                         <ErrorMessage name="serviceName" component="div" />
-                      </tr>
+                      </tr> */}
 
                       <tr>
                         <td>
@@ -146,7 +174,8 @@ function CreateService() {
                         </td>
                         <ErrorMessage name="rentalType" component="div" />
                       </tr>
-                      <button type="submit">create</button>
+
+                      <button type="submit"> create</button>
                     </tbody>
                   </table>
                 </div>
