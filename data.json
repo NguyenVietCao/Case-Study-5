@@ -1,0 +1,30 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "ServiceName": "json-server",
+      "UsableArea": "typicode",
+      "RentalFee": "typicode",
+      "Quantity": "12",
+      "RentalType": "3000"
+    },
+    {
+      "serviceName": "sde",
+      "usableArea": "ds",
+      "rentalFee": "sd",
+      "quantity": "ds",
+      "rentalType": "sds",
+      "id": 2
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "contracs": {
+    "name": "typicode"
+  }
+}

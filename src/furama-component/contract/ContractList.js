@@ -39,7 +39,7 @@ function ContractList(props) {
           <div className="row">
             <div className="col-sm-6">
               <h2>
-                Customer <b>List</b>
+                Contract <b>List</b>
               </h2>
             </div>
             <div className="col-sm-6">
@@ -49,7 +49,7 @@ function ContractList(props) {
                 data-toggle="modal"
               >
                 <i className="material-icons"></i>{" "}
-                <span>Add New Customer</span>
+                <span>Add New Contract</span>
               </a>
               <a
                 href="#deleteEmployeeModal"
